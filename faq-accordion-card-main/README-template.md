@@ -54,12 +54,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
+- css advaced solector
 ### What I learned
 
 Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
@@ -67,17 +62,46 @@ Use this section to recap over some of your major learnings while working throug
 To see how you can add code snippets, see below:
 
 ```html
-<h1>Some HTML code I'm proud of</h1>
+how forms works
 ```
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.question{
+    font:inherit;
+}
+.question label::after{
+    content:url(./images/icon-arrow-down.svg) ;
+    transition:  150ms;
+}
+.question-answer,.question-state{
+    transform:scale(0);
+    height: 0;
+
+}
+ 
+.question-state:checked ~ .question-answer{
+    transform: scale(1);
+    transform-origin: 0;
+    padding: 1rem 0;
+    height: auto;
+}
+
+.question-state:checked ~ .question label::after{
+    transform: rotate(-0.25turn);
+}
+.close-all{
+    display: block;
+    min-height: 100vh;
+    /* position: absolute; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.close-all-r{
+    display: none;
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
+
 ```
 
 If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
@@ -99,14 +123,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+
 
 **Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
